@@ -350,62 +350,62 @@ function validatePlayerForm() {
         isValid = false;
     }
 
-    else if (pNation.value.trim().length <= 3) {
+    if (pNation.value.trim().length <= 3) {
         alert('Nation Name is too Short !');
         isValid = false;
     }
 
-    else if (pClub.value.trim().length <= 2) {
+    if (pClub.value.trim().length <= 2) {
         alert('Club Name is too Short !');
         isValid = false;
     }
 
-    else if (!pPhoto.value.startsWith('http')) {
+    if (!pPhoto.value.startsWith('http')) {
         alert("Invalid URL for Player Picture!");
         isValid = false;
     }
 
-    else if (!pNationFlag.value.startsWith('http')) {
+    if (!pNationFlag.value.startsWith('http')) {
         alert("Invalid URL for Nation Flag!");
         isValid = false;
     }
 
-    else if (!pClubLogo.value.startsWith('http')) {
+    if (!pClubLogo.value.startsWith('http')) {
         alert("Invalid URL for Club Logo!");
         isValid = false;
     }
 
-    else if (pPAC.value < 20 || pPAC.value > 99) {
+    if (pPAC.value < 20 || pPAC.value > 99) {
         alert('20 =< PAC =< 99');
         isValid = false;
     }
 
-    else if (pSHO.value < 20 || pSHO.value > 99) {
+    if (pSHO.value < 20 || pSHO.value > 99) {
         alert('20 =< SHO =< 99');
         isValid = false;
     }
 
-    else if (pPAS.value < 20 || pPAS.value > 99) {
+    if (pPAS.value < 20 || pPAS.value > 99) {
         alert('20 =< PAS =< 99');
         isValid = false;
     }
 
-    else if (pDRI.value < 20 || pDRI.value > 99) {
+    if (pDRI.value < 20 || pDRI.value > 99) {
         alert('20 =< DRI =< 99');
         isValid = false;
     }
 
-    else if (pDEF.value < 20 || pDEF.value > 99) {
+    if (pDEF.value < 20 || pDEF.value > 99) {
         alert('20 =< DEF =< 99');
         isValid = false;
     }
 
-    else if (pPHY.value < 20 || pPHY.value > 99) {
+    if (pPHY.value < 20 || pPHY.value > 99) {
         alert('20 =< PHY =< 99');
         isValid = false;
     }
 
-    else if (pRAT.value < 20 || pRAT.value > 99) {
+    if (pRAT.value < 20 || pRAT.value > 99) {
         alert('20 =< PHY =< 99');
         isValid = false;
     }
