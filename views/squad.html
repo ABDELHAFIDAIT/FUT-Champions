@@ -1,97 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="https://cdn.tailwindcss.com"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="./assets/css/output.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <link href="./assets/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-        <style>
-            .active{
-                color: #FFB200;
-            }
-        </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        <title>UFC Champions</title>
-    </head>
-    <body class="bg-black">
+        .active {
+            color: #FFB200;
+        }
 
-        <header>
-            <nav class="flex items-center justify-between px-[5rem] py-5">
-                <div class="flex items-center gap-10">
-                    <img class="w-[4rem]" src="../assets/img/fut-logo.png"
-                        alt="Logo de FUT CHAMPIONS">
-                    <form
-                        class="flex border-none gap-4 py-2 px-4 rounded-md items-center bg-gray-100 w-min">
-                        <input type="text" placeholder="Search..."
-                            class="text-sm bg-gray-100 outline-none text-red-800 placeholder:text-red-800">
-                        <button><svg width="22px" height="22px"
-                                viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg"><g
-                                    id="SVGRepo_bgCarrier"
-                                    stroke-width="0"></g><g
-                                    id="SVGRepo_tracerCarrier"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"></g><g
-                                    id="SVGRepo_iconCarrier"> <path
-                                        d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
-                                        stroke="#cc0000" stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                </g></svg></button>
-                    </form>
-                </div>
-                <div class="flex items-center gap-20">
-                    <ul
-                        class="flex items-center justify-evenly text-white gap-10">
-                        <a href="../index.html"><li
-                                class="transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Home</li></a>
-                        <a href="./players.html"><li
-                                class="transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Players</li></a>
-                        <a href="#"><li
-                                class="active transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Squad
-                                Builder</li></a>
-                    </ul>
-                    <button type="button"
-                        class="bg-transparent border border-[#FFE37D] px-5 py-2 rounded-sm font-medium text-[#FFE37D] transition-all duration-500 hover:scale-105 hover:bg-[#FFE37D] hover:text-black hover:border-none">Sign
-                        Up</button>
-                </div>
-            </nav>
-        </header>
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
 
-        <footer
-            class="xl:mt-32 mx-auto w-full relative text-center bg-[#000000] text-white">
+    <title>UFC Champions</title>
+</head>
 
+<body class="bg-black">
+
+    <header>
+        <nav class="flex items-center justify-between px-[5rem] py-5">
+            <div class="flex items-center gap-10">
+                <img class="w-[4rem]" src="../assets/img/fut-logo.png" alt="Logo de FUT CHAMPIONS">
+                <form class="flex border-none gap-4 py-2 px-4 rounded-md items-center bg-gray-100 w-min">
+                    <input type="text" placeholder="Search..."
+                        class="text-sm bg-gray-100 outline-none text-red-800 placeholder:text-red-800">
+                    <button><svg width="22px" height="22px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                                    stroke="#cc0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </g>
+                        </svg></button>
+                </form>
+            </div>
+            <div class="flex items-center gap-20">
+                <ul class="flex items-center justify-evenly text-white gap-10">
+                    <a href="../index.html">
+                        <li class="transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Home</li>
+                    </a>
+                    <a href="./players.html">
+                        <li class="transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Players</li>
+                    </a>
+                    <a href="#">
+                        <li class="active transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Squad
+                            Builder
+                        </li>
+                    </a>
+                </ul>
+                <button type="button"
+                    class="bg-transparent border border-[#FFE37D] px-5 py-2 rounded-sm font-medium text-[#FFE37D] transition-all duration-500 hover:scale-105 hover:bg-[#FFE37D] hover:text-black hover:border-none">Sign
+                    Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mx-20 mt-20 mb-10">
+        <section class="grid grid-cols-3 gap-5 ">
+
+            <!-- Formation Section -->
             <div
-                class="flex flex-col justify-center items-center px-6 py-8 md:py-14 xl:pt-20 xl:pb-12">
-                <img class="w-1/12 mb-5" src="../assets/img/fut-logo.png" alt>
-                <h2 class="font-bold text-3xl xl:text-4xl leading-snug">
-                    Ready to get your creativity back?<br>Start your free trial
-                    today.
-                </h2>
-                <a
-                    class="wax transition-all duration-500 mt-8 xl:mt-12 px-12 py-3 text-lg font-medium leading-tight inline-block bg-[#FFE37D] text-black rounded-sm shadow-xl border border-transparent hover:bg-[#FFB200] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-sky-999 focus:ring-sky-500"
-                    href="#">Get
-                    started</a>
-                <div class="mt-14 xl:mt-20">
-                    <nav
-                        class="flex flex-wrap justify-center text-lg font-medium">
-                        <div class="px-5 py-2"><a href="#">Contact</a></div>
-                        <div class="px-5 py-2"><a href="#">Pricing</a></div>
-                        <div class="px-5 py-2"><a href="#">Privacy</a></div>
-                        <div class="px-5 py-2"><a href="#">Terms</a></div>
-                        <div class="px-5 py-2"><a href="#">Twitter</a></div>
-                    </nav>
-                    <p class="mt-7 text-base">© 2024 FUT CHAMPIONS, ALL RIGHTS
-                        RESERVED</p>
+                class="flex gap-5 items-center justify-between bg-white bg-opacity-10 col-span-3 w-full px-10 py-6 flex-wrap rounded-sm">
+                <div class="flex flex-col gap-3">
+                    <label class="text-white font-medium" for="formation">Formation</label>
+                    <select class="bg-slate-300 rounded-sm p-2 w-[25vw]" name="formation">
+                        <option value="F-A">4-4-2</option>
+                        <option value="F-B">4-3-3</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <label class="text-white font-medium" for="style">Build
+                        Up Style</label>
+                    <select class="bg-slate-300 rounded-sm p-2 w-[25vw]" name="style">
+                        <option value="S-A">Balanced</option>
+                        <option value="S-B">Counter</option>
+                        <option value="S-C">Short Passing</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <label class="text-white font-medium" for="approach">Defensive Approach</label>
+                    <select class="bg-slate-300 rounded-sm p-2 w-[25vw]" name="approach">
+                        <option value="A-A">Balanced</option>
+                        <option value="A-B">Deep</option>
+                        <option value="A-C">High</option>
+                        <option value="A-D">Agressive</option>
+                    </select>
                 </div>
             </div>
-        </footer>
 
-        <script src="./assets/js/script.js"></script>
-    </body>
+
+            <!-- Stadium Section -->
+            <div class="bg-[url('../assets/img/stadium.jpg')] bg-cover bg-center grid grid-rows-4 lg:col-span-2 lg:h-[120vh]">
+
+                <!-- Strikers -->
+                <div id="ST" class="grid grid-cols-2 gap-20">
+                    <div class="flex items-center justify-end">
+                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    </div>
+                    <div class="flex items-center">
+                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    </div>
+                </div>
+
+                <!-- Midelfields -->
+                <div class="grid grid-cols-4 gap-5">
+                    <div id="LM" class="flex justify-end">
+                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    </div>
+
+                    <div id="CM" class="col-span-2 flex justify-around">
+                        <div>
+                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                        <div>
+                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                    </div>
+
+                    <div id="RM" class="flex">
+                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    </div>
+                </div>
+
+                <!-- Defenders -->
+                <div class="grid grid-cols-4 gap-5">
+                    <div id="LB" class="flex justify-end">
+                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    </div>
+
+                    <div id="CB" class="col-span-2 flex justify-around">
+                        <div>
+                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                        <div>
+                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                    </div>
+
+                    <div id="RB" class="flex">
+                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    </div>
+                </div>
+
+                <!-- Goal Keeper -->
+                <div id="GK" class="flex justify-center">
+                    <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                </div>
+            </div>
+
+
+            <!-- Substitions Section -->
+            <div class="bg-white bg-opacity-10 h-[120vh] w-full py-5 px-5 overflow-auto">
+                <h1 class="uppercase text-center font-bold text-[2vw] text-white mb-5">Substitutions</h1>
+                <div class="grid grid-rows-4 gap-5">
+                    <!-- Strikers -->
+                    <div class="flex flex-col gap-5">
+                        <h1 class="text-red-500 font-medium text-lg">STRIKERS</h1>
+                        <div id="SUB-ST" class="flex justify-center items-center gap-5 flex-wrap">
+                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                    </div>
+
+                    <!-- Midelfields -->
+                    <div class="flex flex-col gap-5">
+                        <h1 class="text-lime-400 font-medium text-lg uppercase">Midelfields</h1>
+                        <div id="SUB-MD" class="flex justify-center items-center gap-5 flex-wrap">
+                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                    </div>
+
+                    <!-- Defenders -->
+                    <div class="flex flex-col gap-5">
+                        <h1 class="text-blue-500 font-medium text-lg uppercase">Defenders</h1>
+                        <div id="SUB-DF" class="flex justify-center items-center gap-5 flex-wrap">
+                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                    </div>
+
+                    <!-- Goal Keeper -->
+                    <div class="flex flex-col gap-5">
+                        <h1 class="text-orange-400 font-medium text-lg uppercase">Goal Keeper</h1>
+                        <div id="SUB-GK" class="flex justify-center items-center gap-5">
+                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                    </div>
+
+                    <!-- Midelfields -->
+                    <!-- <div class="grid grid-cols-4 gap-5">
+                        <div id="LM" class="flex justify-end">
+                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+
+                        <div id="CM" class="col-span-2 flex justify-around">
+                            <div>
+                                <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                            </div>
+                            <div>
+                                <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                            </div>
+                        </div>
+
+                        <div id="RM" class="flex">
+                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                    </div> -->
+
+                    <!-- Backs -->
+                    <!-- <div class="grid grid-cols-4 gap-5">
+                        <div id="LB" class="flex justify-end">
+                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+
+                        <div id="CB" class="col-span-2 flex justify-around">
+                            <div>
+                                <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                            </div>
+                            <div>
+                                <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                            </div>
+                        </div>
+
+                        <div id="RB" class="flex">
+                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        </div>
+                    </div> -->
+
+                    <!-- Goal Keeper -->
+                    <!-- <div id="GK" class="flex justify-center">
+                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    </div> -->
+                </div>
+            </div>
+
+        </section>
+
+        <section class="mx-28 bg-[#0f0c1e] h-[85vh] fixed inset-0 top-[50%] translate-y-[-50%] py-5 hidden">
+            <h1 class="text-white text-center text-xl font-semibold uppercase">Add Players</h1>
+            <form class="text-white flex justify-evenly items-center py-2">
+                <div>
+                    <input type="radio" id="exist-player" name="add-player" value="exist" checked />
+                    <label for="exist">Choose an Exist Player</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="new-player" name="add-player" value="new" />
+                    <label for="new">Customize a New Player</label>
+                </div>
+
+            </form>
+
+
+
+            <form class="px-10 mx-auto">
+                <div class="grid md:grid-cols-2 md:gap-10">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="text" name="player-name" id="player-name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="player-name"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Player Name</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="url" name="Player Picture" id="player-picture"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="Player Picture"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Player Picture</label>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 md:gap-10">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="text" name="nationality" id="nationality"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="nationality"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nationality</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="url" name="nation-flag" id="nation-flag"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="nation-flag"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nation Flag</label>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 md:gap-10">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="text" name="club" id="club"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="club"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Club</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="url" name="club-logo" id="club-logo"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="club-logo"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Club Logo</label>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 md:gap-10">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="number" min="40" max="99" name="pace" id="PAC"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="pace"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">PACE</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="number" min="40" max="99" name="shooting" id="SHO"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="shooting"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">SHOOTING</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="number" min="40" max="99" name="physical" id="PHY"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="physical"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">PHYSICAL</label>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 md:gap-10">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="number" min="40" max="99" name="passing" id="PAS"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="passing"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">PASSING</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="number" min="40" max="99" name="dribling" id="DRI"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="dribling"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">DRIBLING</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="number" min="40" max="99" name="defending" id="DEF"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="defending"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">DEFENDING</label>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 md:gap-10">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input type="number" min="40" max="99" name="rating" id="RAT"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="rating"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">RATING</label>
+                    </div>
+                </div>
+
+                <div class="flex gap-5">
+                    <button type="button" id="confirm-add"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                    <button type="button" id="cancel-add"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-blue-800">Annuler</button>
+                </div>
+                
+                
+            </form>
+
+
+            <!-- <form class="grid grid-cols-2 gap-8 px-20">
+                <div class="flex gap-10">
+                    <div class="flex flex-col gap-6">
+                        <label for="player-name">Player Name</label>
+                        <label for="player-nationality">Nationality</label>
+                        <label for="player-club">Player Club</label>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <input class="w-[25vw]" type="number" min="40" max="99" name="player-name" placeholder="Ex: Lionel Messi">
+                        <input class="w-[25vw]" type="text" name="player-nationality" placeholder="Ex: Argentina">
+                        <input class="w-[25vw]" type="text" name="player-club" placeholder="Ex: Inter Miami">
+                    </div>
+                </div>
+
+                <div class="flex gap-10">
+                    <div class="flex flex-col gap-6">
+                        <label for="player-pic">Player Picture</label>
+                        <label for="nation-flag">Nation Flag</label>
+                        <label for="club-logo">Club Logo</label>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <input class="w-[25vw]" type="url" name="player-pic">
+                        <input class="w-[25vw]" type="url" name="nation-flag">
+                        <input class="w-[25vw]" type="url" name="club-logo">
+                    </div>
+                </div>
+
+
+                <div class="col-span-2 grid grid-cols-3 gap-10">
+                    <div class="flex gap-10">
+                        <div class="flex flex-col gap-6">
+                            <label for="player-pic">Player Picture</label>
+                            <label for="nation-flag">Nation Flag</label>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <input class="w-[10vw]" type="number" min="40" max="100" name="player-pic">
+                            <input class="w-[10vw]" type="number" min="40" max="100" name="nation-flag">
+                        </div>
+                    </div>
+                    <div class="flex gap-10">
+                        <div class="flex flex-col gap-6">
+                            <label for="player-pic">Player Picture</label>
+                            <label for="nation-flag">Nation Flag</label>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <input class="w-[10vw]" type="number" min="40" max="100" name="player-pic">
+                            <input class="w-[10vw]" type="number" min="40" max="100" name="nation-flag">
+                        </div>
+                    </div>
+                    <div class="flex gap-10">
+                        <div class="flex flex-col gap-6">
+                            <label for="player-pic">Player Picture</label>
+                            <label for="nation-flag">Nation Flag</label>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <input class="w-[10vw]" type="number" min="40" max="100" name="player-pic">
+                            <input class="w-[10vw]" type="number" min="40" max="100" name="nation-flag">
+                        </div>
+                    </div>
+                    <div class="col-span-3 flex gap-10 justify-center">
+                        <label for="player-pic">Player Picture</label>
+                        <input class="w-[10vw]" type="number" min="40" max="100" name="player-pic">
+                    </div>
+                </div>
+
+
+            </form> -->
+        </section>
+    </main>
+
+    <footer class="mx-auto w-full text-center bg-[#000000] text-white">
+
+        <div class="flex flex-col justify-center items-center px-6 py-8 md:py-14 xl:pt-20 xl:pb-12">
+            <img class="w-1/12 mb-5" src="../assets/img/fut-logo.png" alt>
+            <h2 class="font-bold text-3xl xl:text-4xl leading-snug">
+                Ready to get your creativity back?<br>Start your free trial
+                today.
+            </h2>
+            <a class="wax transition-all duration-500 mt-8 xl:mt-12 px-12 py-3 text-lg font-medium leading-tight inline-block bg-[#FFE37D] text-black rounded-sm shadow-xl border border-transparent hover:bg-[#FFB200] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-sky-999 focus:ring-sky-500"
+                href="#">Get
+                started</a>
+            <div class="mt-14 xl:mt-20">
+                <nav class="flex flex-wrap justify-center text-lg font-medium">
+                    <div class="px-5 py-2"><a href="#">Contact</a></div>
+                    <div class="px-5 py-2"><a href="#">Pricing</a></div>
+                    <div class="px-5 py-2"><a href="#">Privacy</a></div>
+                    <div class="px-5 py-2"><a href="#">Terms</a></div>
+                    <div class="px-5 py-2"><a href="#">Twitter</a></div>
+                </nav>
+                <p class="mt-7 text-base">© 2024 FUT CHAMPIONS, ALL RIGHTS
+                    RESERVED
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
