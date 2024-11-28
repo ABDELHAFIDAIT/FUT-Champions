@@ -9,6 +9,7 @@
 
     <link href="./assets/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/card.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -68,7 +69,11 @@
         </nav>
     </header>
 
+
+
     <main class="mx-20 mt-20 mb-10">
+
+        <!-- Display Players in Stadium -->
         <section class="grid grid-cols-3 gap-5 ">
 
             <!-- Formation Section -->
@@ -108,58 +113,58 @@
             <div class="bg-[url('../assets/img/stadium.jpg')] bg-cover bg-center grid grid-rows-4 lg:col-span-2 lg:h-[120vh]">
 
                 <!-- Strikers -->
-                <div id="ST" class="grid grid-cols-2 gap-20">
-                    <div class="flex items-center justify-end">
-                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                <div class="grid grid-cols-2 gap-20">
+                    <div id="ST-1" class="flex items-center justify-end">
+                        <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                     </div>
-                    <div class="flex items-center">
-                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    <div id="ST-2" class="flex items-center">
+                        <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                     </div>
                 </div>
 
                 <!-- Midelfields -->
                 <div class="grid grid-cols-4 gap-5">
                     <div id="LM" class="flex justify-end">
-                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                     </div>
 
-                    <div id="CM" class="col-span-2 flex justify-around">
-                        <div>
-                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    <div class="col-span-2 flex justify-around">
+                        <div id="CM-1">
+                            <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                         </div>
-                        <div>
-                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        <div id="CM-2">
+                            <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                         </div>
                     </div>
 
                     <div id="RM" class="flex">
-                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                     </div>
                 </div>
 
                 <!-- Defenders -->
                 <div class="grid grid-cols-4 gap-5">
                     <div id="LB" class="flex justify-end">
-                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                     </div>
 
-                    <div id="CB" class="col-span-2 flex justify-around">
-                        <div>
-                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    <div class="col-span-2 flex justify-around">
+                        <div id="CB-1">
+                            <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                         </div>
-                        <div>
-                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        <div id="CB-2">
+                            <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                         </div>
                     </div>
 
                     <div id="RB" class="flex">
-                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                        <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                     </div>
                 </div>
 
                 <!-- Goal Keeper -->
                 <div id="GK" class="flex justify-center">
-                    <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
+                    <img class="card w-[8vw] cursor-pointer" src="../assets/img/card.png">
                 </div>
             </div>
 
@@ -172,8 +177,8 @@
                     <div class="flex flex-col gap-5">
                         <h1 class="text-red-500 font-medium text-lg">STRIKERS</h1>
                         <div id="SUB-ST" class="flex justify-center items-center gap-5 flex-wrap">
-                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
-                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="card w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="card w-[10vw] cursor-pointer" src="../assets/img/card.png">
                         </div>
                     </div>
 
@@ -181,8 +186,8 @@
                     <div class="flex flex-col gap-5">
                         <h1 class="text-lime-400 font-medium text-lg uppercase">Midelfields</h1>
                         <div id="SUB-MD" class="flex justify-center items-center gap-5 flex-wrap">
-                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
-                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="card w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="card w-[10vw] cursor-pointer" src="../assets/img/card.png">
                         </div>
                     </div>
 
@@ -190,8 +195,8 @@
                     <div class="flex flex-col gap-5">
                         <h1 class="text-blue-500 font-medium text-lg uppercase">Defenders</h1>
                         <div id="SUB-DF" class="flex justify-center items-center gap-5 flex-wrap">
-                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
-                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="card w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="card w-[10vw] cursor-pointer" src="../assets/img/card.png">
                         </div>
                     </div>
 
@@ -199,77 +204,34 @@
                     <div class="flex flex-col gap-5">
                         <h1 class="text-orange-400 font-medium text-lg uppercase">Goal Keeper</h1>
                         <div id="SUB-GK" class="flex justify-center items-center gap-5">
-                            <img class="w-[10vw] cursor-pointer" src="../assets/img/card.png">
+                            <img class="card w-[10vw] cursor-pointer" src="../assets/img/card.png">
                         </div>
                     </div>
-
-                    <!-- Midelfields -->
-                    <!-- <div class="grid grid-cols-4 gap-5">
-                        <div id="LM" class="flex justify-end">
-                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                        </div>
-
-                        <div id="CM" class="col-span-2 flex justify-around">
-                            <div>
-                                <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                            </div>
-                            <div>
-                                <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                            </div>
-                        </div>
-
-                        <div id="RM" class="flex">
-                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                        </div>
-                    </div> -->
-
-                    <!-- Backs -->
-                    <!-- <div class="grid grid-cols-4 gap-5">
-                        <div id="LB" class="flex justify-end">
-                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                        </div>
-
-                        <div id="CB" class="col-span-2 flex justify-around">
-                            <div>
-                                <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                            </div>
-                            <div>
-                                <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                            </div>
-                        </div>
-
-                        <div id="RB" class="flex">
-                            <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                        </div>
-                    </div> -->
-
-                    <!-- Goal Keeper -->
-                    <!-- <div id="GK" class="flex justify-center">
-                        <img class="w-[8vw] cursor-pointer" src="../assets/img/card.png">
-                    </div> -->
                 </div>
             </div>
 
         </section>
 
-        <section class="mx-28 bg-[#0f0c1e] h-[85vh] fixed inset-0 top-[50%] translate-y-[-50%] py-5 hidden">
+        <!-- Add Popup Form -->
+        <section id="popup-add-player" class="mx-28 bg-[#0f0c1e] h-[95vh] fixed inset-0 top-[50%] translate-y-[-50%] py-5 hidden">
             <h1 class="text-white text-center text-xl font-semibold uppercase">Add Players</h1>
+
+            <!-- Choose Add Method -->
             <form class="text-white flex justify-evenly items-center py-2">
                 <div>
-                    <input type="radio" id="exist-player" name="add-player" value="exist" checked />
+                    <input type="radio" id="exist-player" name="add-player" value="exist"  checked/>
                     <label for="exist">Choose an Exist Player</label>
                 </div>
 
                 <div>
-                    <input type="radio" id="new-player" name="add-player" value="new" />
+                    <input type="radio" id="new-player" name="add-player" value="new"/>
                     <label for="new">Customize a New Player</label>
                 </div>
 
             </form>
 
-
-
-            <form class="px-10 mx-auto">
+            <!-- Custom Player Form -->
+            <form id="form-custom-player" class="px-10 mx-auto hidden">
                 <div class="grid md:grid-cols-2 md:gap-10">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="player-name" id="player-name"
@@ -380,85 +342,29 @@
                 </div>
 
                 <div class="flex gap-5">
-                    <button type="button" id="confirm-add"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                    <button type="button" id="cancel-add"
+                    <button type="button" id="confirm-custom"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+                    <button type="button" id="cancel-custom"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-blue-800">Annuler</button>
                 </div>
-                
-                
             </form>
 
-
-            <!-- <form class="grid grid-cols-2 gap-8 px-20">
-                <div class="flex gap-10">
-                    <div class="flex flex-col gap-6">
-                        <label for="player-name">Player Name</label>
-                        <label for="player-nationality">Nationality</label>
-                        <label for="player-club">Player Club</label>
-                    </div>
-                    <div class="flex flex-col gap-6">
-                        <input class="w-[25vw]" type="number" min="40" max="99" name="player-name" placeholder="Ex: Lionel Messi">
-                        <input class="w-[25vw]" type="text" name="player-nationality" placeholder="Ex: Argentina">
-                        <input class="w-[25vw]" type="text" name="player-club" placeholder="Ex: Inter Miami">
-                    </div>
+            <!-- Exist Player Form -->
+            <div id="form-exist-player" class="px-10 mx-auto">
+                <div id="display-players" class="my-5 flex hidden items-center gap-10 justify-center flex-wrap">
+                    <!-- <img src="../assets/img/card.png" class="w-[14vw]">
+                    <img src="../assets/img/card.png" class="w-[14vw]">
+                    <img src="../assets/img/card.png" class="w-[14vw]">
+                    <img src="../assets/img/card.png" class="w-[14vw]"> -->
                 </div>
+            </div>
 
-                <div class="flex gap-10">
-                    <div class="flex flex-col gap-6">
-                        <label for="player-pic">Player Picture</label>
-                        <label for="nation-flag">Nation Flag</label>
-                        <label for="club-logo">Club Logo</label>
-                    </div>
-                    <div class="flex flex-col gap-6">
-                        <input class="w-[25vw]" type="url" name="player-pic">
-                        <input class="w-[25vw]" type="url" name="nation-flag">
-                        <input class="w-[25vw]" type="url" name="club-logo">
-                    </div>
-                </div>
-
-
-                <div class="col-span-2 grid grid-cols-3 gap-10">
-                    <div class="flex gap-10">
-                        <div class="flex flex-col gap-6">
-                            <label for="player-pic">Player Picture</label>
-                            <label for="nation-flag">Nation Flag</label>
-                        </div>
-                        <div class="flex flex-col gap-6">
-                            <input class="w-[10vw]" type="number" min="40" max="100" name="player-pic">
-                            <input class="w-[10vw]" type="number" min="40" max="100" name="nation-flag">
-                        </div>
-                    </div>
-                    <div class="flex gap-10">
-                        <div class="flex flex-col gap-6">
-                            <label for="player-pic">Player Picture</label>
-                            <label for="nation-flag">Nation Flag</label>
-                        </div>
-                        <div class="flex flex-col gap-6">
-                            <input class="w-[10vw]" type="number" min="40" max="100" name="player-pic">
-                            <input class="w-[10vw]" type="number" min="40" max="100" name="nation-flag">
-                        </div>
-                    </div>
-                    <div class="flex gap-10">
-                        <div class="flex flex-col gap-6">
-                            <label for="player-pic">Player Picture</label>
-                            <label for="nation-flag">Nation Flag</label>
-                        </div>
-                        <div class="flex flex-col gap-6">
-                            <input class="w-[10vw]" type="number" min="40" max="100" name="player-pic">
-                            <input class="w-[10vw]" type="number" min="40" max="100" name="nation-flag">
-                        </div>
-                    </div>
-                    <div class="col-span-3 flex gap-10 justify-center">
-                        <label for="player-pic">Player Picture</label>
-                        <input class="w-[10vw]" type="number" min="40" max="100" name="player-pic">
-                    </div>
-                </div>
-
-
-            </form> -->
         </section>
+
     </main>
+
+
+
 
     <footer class="mx-auto w-full text-center bg-[#000000] text-white">
 
@@ -486,7 +392,7 @@
         </div>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
