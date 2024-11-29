@@ -1236,14 +1236,6 @@ RB.addEventListener('click', function(){
 
 
 
-
-function filter(pos){
-
-}
-
-
-
-
 // `<div class="player-card-top">
 //                                     <div class="player-master-info">
 //                                         <div class="player-rating">

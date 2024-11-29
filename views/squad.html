@@ -21,6 +21,23 @@
         * {
             font-family: 'Poppins';
         }
+
+        #warning-box {
+            opacity: 0;
+            transform: translateY(20px);
+            /* Commence légèrement en dessous */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            display: none;
+            /* Masqué par défaut */
+        }
+
+        #warning-box.show {
+            opacity: 1;
+            transform: translateY(0);
+            /* Revient à sa position initiale */
+            display: flex;
+            /* Affiché avec flexbox lorsqu'il apparaît */
+        }
     </style>
 
     <title>UFC Champions</title>
@@ -69,8 +86,6 @@
         </nav>
     </header>
 
-
-
     <main class="mx-20 mt-20 mb-10">
 
         <!-- Display Players in Stadium -->
@@ -110,7 +125,8 @@
 
 
             <!-- Stadium Section -->
-            <div class="bg-[url('../assets/img/stadium.jpg')] bg-cover bg-center grid grid-rows-4 lg:col-span-2 lg:h-[120vh]">
+            <div
+                class="bg-[url('../assets/img/stadium.jpg')] bg-cover bg-center grid grid-rows-4 lg:col-span-2 lg:h-[120vh]">
 
                 <!-- Strikers -->
                 <div class="grid grid-cols-2 gap-20">
@@ -213,18 +229,19 @@
         </section>
 
         <!-- Add Popup Form -->
-        <section id="popup-add-player" class="mx-28 bg-[#0f0c1e] h-[95vh] fixed inset-0 top-[50%] translate-y-[-50%] py-5 hidden">
+        <section id="popup-add-player"
+            class="mx-28 bg-[#0f0c1e] h-[95vh] fixed inset-0 top-[50%] translate-y-[-50%] py-5 hidden">
             <h1 class="text-white text-center text-xl font-semibold uppercase">Add Players</h1>
 
             <!-- Choose Add Method -->
             <form class="text-white flex justify-evenly items-center py-2">
                 <div>
-                    <input type="radio" id="exist-player" name="add-player" value="exist"  checked/>
+                    <input type="radio" id="exist-player" name="add-player" value="exist" checked />
                     <label for="exist">Choose an Exist Player</label>
                 </div>
 
                 <div>
-                    <input type="radio" id="new-player" name="add-player" value="new"/>
+                    <input type="radio" id="new-player" name="add-player" value="new" />
                     <label for="new">Customize a New Player</label>
                 </div>
 
@@ -238,17 +255,19 @@
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="player-name"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Player Name</label>
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Player
+                            Name</label>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="url" name="Player Picture" id="player-picture"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="Player Picture"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Player Picture</label>
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Player
+                            Picture (URL)</label>
                     </div>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 md:gap-10">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="nationality" id="nationality"
@@ -262,10 +281,11 @@
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="nation-flag"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nation Flag</label>
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nation
+                            Flag (URL)</label>
                     </div>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 md:gap-10">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="club" id="club"
@@ -279,7 +299,8 @@
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="club-logo"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Club Logo</label>
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Club
+                            Logo (URL)</label>
                     </div>
                 </div>
 
@@ -343,15 +364,16 @@
 
                 <div class="flex gap-5">
                     <button type="button" id="confirm-custom"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
                     <button type="button" id="cancel-custom"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-blue-800">Annuler</button>
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-blue-800">Annuler</button>
                 </div>
             </form>
 
             <!-- Exist Player Form -->
             <div id="form-exist-player" class="px-10 mx-auto">
-                <div id="display-players" class="my-5 flex hidden items-center gap-10 justify-center flex-wrap overflow-auto h-80">
+                <div id="display-players"
+                    class="my-5 flex hidden items-center gap-10 justify-center flex-wrap overflow-auto h-80">
                     <!-- <img src="../assets/img/card.png" class="w-[14vw]">
                     <img src="../assets/img/card.png" class="w-[14vw]">
                     <img src="../assets/img/card.png" class="w-[14vw]">
@@ -359,13 +381,17 @@
                 </div>
                 <div class="flex gap-5">
                     <button type="button" id="cancel-exist"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-blue-800">Annuler</button>
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-blue-800">Annuler</button>
                 </div>
             </div>
 
         </section>
 
     </main>
+
+
+
+    
 
 
 
