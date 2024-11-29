@@ -333,143 +333,6 @@ const pPHY = document.getElementById('PHY');
 const pRAT = document.getElementById('RAT');
 
 
-
-
-
-
-
-
-
-// btnConfirmCustom.onclick = function(){
-//     const valid = validatePlayerForm();
-//     if(valid){
-//         for (let i = 0; i < 18; i++) {
-//             statiqCard[i].addEventListener('click', function () {
-//                 popup.classList.remove('hidden');
-        
-//                 if (i == 0 || i == 1) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'ST', statiqCard[i]);
-//                 }
-//                 if (i == 2) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'LM', statiqCard[i]);
-//                 }
-//                 if (i == 3 || i == 4) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'CM', statiqCard[i]);
-//                 }
-//                 if (i == 5) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'RM', statiqCard[i]);
-//                 }
-//                 if (i == 6) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'LB', statiqCard[i]);
-//                 }
-//                 if (i == 7 || i == 8) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'CB', statiqCard[i]);
-//                 }
-//                 if (i == 9) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'RB', statiqCard[i]);
-//                 }
-//             })
-//         }
-//     }
-
-//     popup.classList.add('hidden');
-// }
-
-
-
-for(let t=0 ; t<10 ; t++){
-    statiqCard[t].addEventListener('click', function(){
-        popup.classList.remove('hidden');
-        
-        if (t == 0 || t == 1) {
-            btnConfirmCustom.addEventListener('click' , function(){
-                const valid = validatePlayerForm();
-                if(valid){
-                    createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'ST', statiqCard[t]);
-                    popup.classList.add('hidden');
-                }
-                formCustom.reset();
-            })
-        }
-        if (t == 2) {
-            btnConfirmCustom.addEventListener('click' , function(){
-                const valid = validatePlayerForm();
-                if(valid){
-                    createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'LM', statiqCard[t]);
-                    popup.classList.add('hidden');
-                    formCustom.requestFullscreen();
-                }
-            })
-        }
-        if (t == 3 || t == 4) {
-            btnConfirmCustom.addEventListener('click' , function(){
-                const valid = validatePlayerForm();
-                if(valid){
-                    createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'CM', statiqCard[t]);
-                    popup.classList.add('hidden');
-                    formCustom.requestFullscreen();
-                }
-            })
-        }
-        if (t == 5) {
-            btnConfirmCustom.addEventListener('click' , function(){
-                const valid = validatePlayerForm();
-                if(valid){
-                    createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'RM', statiqCard[t]);
-                    popup.classList.add('hidden');
-                    formCustom.requestFullscreen();
-                }
-            })
-        }
-        if (t == 6) {
-            btnConfirmCustom.addEventListener('click' , function(){
-                const valid = validatePlayerForm();
-                if(valid){
-                    createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'LB', statiqCard[t]);
-                    popup.classList.add('hidden');
-                    formCustom.requestFullscreen();
-                }
-            })
-        }
-        if (t == 7 || t == 8) {
-            btnConfirmCustom.addEventListener('click' , function(){
-                const valid = validatePlayerForm();
-                if(valid){
-                    createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'CB', statiqCard[t]);
-                    popup.classList.add('hidden');
-                    formCustom.requestFullscreen();
-                }
-            })
-        }
-        if (t == 9) {
-            btnConfirmCustom.addEventListener('click' , function(){
-                const valid = validatePlayerForm();
-                if(valid){
-                    createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'RB', statiqCard[t]);
-                    popup.classList.add('hidden');
-                    formCustom.requestFullscreen();
-                }
-            })
-        }
-    });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function validatePlayerForm() {
     let isValid = true;
 
@@ -609,8 +472,169 @@ function createCardPlayer(name, photo, flag, logo, pace, shot, pass, dri, def, p
 
         target.parentElement.appendChild(cCard);
         target.classList.add('hidden');
-    
+        cCard.classList.remove('card-p');
 }
+
+
+for (let t = 0; t < 10; t++) {
+    statiqCard[t].addEventListener('click', function () {
+        popup.classList.remove('hidden');
+
+        let position;
+        if (t === 0 || t === 1) position = 'ST';
+        else if (t === 2) position = 'LM';
+        else if (t === 3 || t === 4) position = 'CM';
+        else if (t === 5) position = 'RM';
+        else if (t === 6) position = 'LB';
+        else if (t === 7 || t === 8) position = 'CB';
+        else if (t === 9) position = 'RB';
+
+        const confirmHandler = function () {
+            const valid = validatePlayerForm();
+            if (valid) {
+                createCardPlayer(
+                    pName.value,
+                    pPhoto.value,
+                    pNation.value,
+                    pClubLogo.value,
+                    pPAC.value,
+                    pSHO.value,
+                    pPAS.value,
+                    pDRI.value,
+                    pDEF.value,
+                    pPHY.value,
+                    pRAT.value,
+                    position,
+                    statiqCard[t]
+                );
+                popup.classList.add('hidden');
+                formCustom.reset();
+                btnConfirmCustom.removeEventListener('click', confirmHandler);
+            }
+        };
+
+        btnConfirmCustom.addEventListener('click', confirmHandler);
+    });
+}
+
+
+
+
+
+
+// btnConfirmCustom.onclick = function(){
+//     const valid = validatePlayerForm();
+//     if(valid){
+//         for (let i = 0; i < 18; i++) {
+//             statiqCard[i].addEventListener('click', function () {
+//                 popup.classList.remove('hidden');
+        
+//                 if (i == 0 || i == 1) {
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'ST', statiqCard[i]);
+//                 }
+//                 if (i == 2) {
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'LM', statiqCard[i]);
+//                 }
+//                 if (i == 3 || i == 4) {
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'CM', statiqCard[i]);
+//                 }
+//                 if (i == 5) {
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'RM', statiqCard[i]);
+//                 }
+//                 if (i == 6) {
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'LB', statiqCard[i]);
+//                 }
+//                 if (i == 7 || i == 8) {
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'CB', statiqCard[i]);
+//                 }
+//                 if (i == 9) {
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'RB', statiqCard[i]);
+//                 }
+//             })
+//         }
+//     }
+
+//     popup.classList.add('hidden');
+// }
+
+
+
+// for(let t=0 ; t<10 ; t++){
+//     statiqCard[t].addEventListener('click', function(){
+//         popup.classList.remove('hidden');
+        
+//         if (t == 0 || t == 1) {
+//             btnConfirmCustom.addEventListener('click' , function(){
+//                 const valid = validatePlayerForm();
+//                 if(valid){
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'ST', statiqCard[t]);
+//                     popup.classList.add('hidden');
+//                 }
+//                 formCustom.reset();
+//             })
+//         }
+//         else if (t == 2) {
+//             btnConfirmCustom.addEventListener('click' , function(){
+//                 const valid = validatePlayerForm();
+//                 if(valid){
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'LM', statiqCard[t]);
+//                     popup.classList.add('hidden');
+//                 }
+//                 formCustom.reset();
+//             })
+//         }
+//         else if (t == 3 || t == 4) {
+//             btnConfirmCustom.addEventListener('click' , function(){
+//                 const valid = validatePlayerForm();
+//                 if(valid){
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'CM', statiqCard[t]);
+//                     popup.classList.add('hidden');
+//                 }
+//                 formCustom.reset();
+//             })
+//         }
+//         else if (t == 5) {
+//             btnConfirmCustom.addEventListener('click' , function(){
+//                 const valid = validatePlayerForm();
+//                 if(valid){
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'RM', statiqCard[t]);
+//                     popup.classList.add('hidden');
+//                 }
+//                 formCustom.reset();
+//             })
+//         }
+//         else if (t == 6) {
+//             btnConfirmCustom.addEventListener('click' , function(){
+//                 const valid = validatePlayerForm();
+//                 if(valid){
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'LB', statiqCard[t]);
+//                     popup.classList.add('hidden');
+//                 }
+//                 formCustom.reset();
+//             })
+//         }
+//         else if (t == 7 || t == 8) {
+//             btnConfirmCustom.addEventListener('click' , function(){
+//                 const valid = validatePlayerForm();
+//                 if(valid){
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'CB', statiqCard[t]);
+//                     popup.classList.add('hidden');
+//                 }
+//                 formCustom.reset();
+//             })
+//         }
+//         else if (t == 9) {
+//             btnConfirmCustom.addEventListener('click' , function(){
+//                 const valid = validatePlayerForm();
+//                 if(valid){
+//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'RB', statiqCard[t]);
+//                     popup.classList.add('hidden');
+//                 }
+//                 formCustom.reset();
+//             })
+//         }
+//     });
+// }
 
 
 
