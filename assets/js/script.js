@@ -219,6 +219,7 @@ function filterPlayers(poste, index) {
             let plyCard = document.querySelectorAll('.card-p');
             for (let j = 0; j < countCards; j++) {
                 plyCard[j].addEventListener('click', function () {
+                    this.classList.add('scale-[0.3]' , 'md:scale-[0.7]' , 'lg:scale-[0.8]')
                     this.classList.remove('card-p');
                     statiqCard[index].classList.add('hidden');
                     statiqCard[index].parentElement.appendChild(plyCard[j]);
@@ -311,6 +312,7 @@ function displayGK(index) {
             let plyCard = document.querySelectorAll('.card-p');
             for (let j = 0; j < countCards; j++) {
                 plyCard[j].addEventListener('click', function () {
+                    this.classList.add('scale-[0.3]' , 'md:scale-[0.5]' , 'lg:scale-[0.8]');
                     this.classList.remove('card-p')
                     statiqCard[index].classList.add('hidden');
                     statiqCard[index].parentElement.appendChild(plyCard[j]);
@@ -486,6 +488,7 @@ function createCardPlayer(name, photo, flag, logo, pace, shot, pass, dri, def, p
     target.parentElement.appendChild(cCard);
     target.classList.add('hidden');
     cCard.classList.remove('card-p');
+    cCard.classList.add('scale-[0.3]' , 'md:scale-[0.7]' , 'lg:scale-[0.8]')
 }
 
 
