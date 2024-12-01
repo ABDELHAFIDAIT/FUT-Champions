@@ -28,44 +28,47 @@
 <body class="bg-black">
 
   <header>
-    <nav class="flex items-center justify-between px-[5rem] py-5">
+    <nav class="flex items-center  lg:justify-between px-[5rem] py-5 gap-10 flex-wrap justify-center">
+      <div class="flex items-center gap-10 justify-center  md:justify-between">
+          <img class="w-[4rem]" src="../assets/img/fut-logo.png" alt="Logo de FUT CHAMPIONS">
+          <form class="flex border-none gap-4 py-2 px-4 rounded-md items-center bg-gray-100 w-min">
+              <input type="text" placeholder="Search..."
+                  class="text-sm bg-gray-100 outline-none text-red-800 placeholder:text-red-800">
+              <button><svg width="22px" height="22px" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                          <path
+                              d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                              stroke="#cc0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          </path>
+                      </g>
+                  </svg></button>
+          </form>
+      </div>
       <div class="flex items-center gap-10">
-        <img class="w-[4rem]" src="../assets/img/fut-logo.png" alt="Logo de FUT CHAMPIONS">
-        <form class="flex border-none gap-4 py-2 px-4 rounded-md items-center bg-gray-100 w-min">
-          <input type="text" placeholder="Search..."
-            class="text-sm bg-gray-100 outline-none text-red-800 placeholder:text-red-800">
-          <button><svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
-                  stroke="#cc0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </g>
-            </svg></button>
-        </form>
+          <ul class="flex items-center justify-evenly text-white gap-10">
+              <a href="../index.html">
+                  <li class="transition-all duration-500 hover:text-[#FFE37D] text-sm md:text-lg font-medium">Home
+                  </li>
+              </a>
+              <a href="#">
+                  <li class="active transition-all duration-500 hover:text-[#FFE37D] text-sm md:text-lg font-medium">Players</li>
+              </a>
+              <a href="squad.html">
+                  <li class="transition-all duration-500 hover:text-[#FFE37D] text-sm md:text-lg font-medium">Squad
+                      Builder</li>
+              </a>
+          </ul>
+          <button type="button"
+              class="bg-transparent border border-[#FFE37D] text-xs lg:text-lg w-max md:w-max px-3 py-1 md:px-5 md:py-2 rounded-sm font-medium text-[#FFE37D] transition-all duration-500 hover:scale-105 hover:bg-[#FFE37D] hover:text-black hover:border-none">Sign
+              Up</button>
       </div>
-      <div class="flex items-center gap-20">
-        <ul class="flex items-center justify-evenly text-white gap-10">
-          <a href="../index.html">
-            <li class="transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Home</li>
-          </a>
-          <a href="#">
-            <li class="active transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Players</li>
-          </a>
-          <a href="./squad.html">
-            <li class="transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Squad
-              Builder</li>
-          </a>
-        </ul>
-        <button type="button"
-          class="bg-transparent border border-[#FFE37D] px-5 py-2 rounded-sm font-medium text-[#FFE37D] transition-all duration-500 hover:scale-105 hover:bg-[#FFE37D] hover:text-black hover:border-none">Sign
-          Up</button>
-      </div>
-    </nav>
+  </nav>
   </header>
 
-  <div class="fut-player-card cursor-pointer" id="player-rb">
+  <!-- <div class="fut-player-card cursor-pointer" id="player-rb">
     <svg id="delete-icon" class="delete-card absolute top-7 right-2 transition-all duration-300 hover:scale-125" width="20px" height="20px" fill="#ff0000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12,23A11,11,0,1,0,1,12,11.013,11.013,0,0,0,12,23ZM12,3a9,9,0,1,1-9,9A9.01,9.01,0,0,1,12,3ZM8.293,14.293,10.586,12,8.293,9.707A1,1,0,0,1,9.707,8.293L12,10.586l2.293-2.293a1,1,0,0,1,1.414,1.414L13.414,12l2.293,2.293a1,1,0,1,1-1.414,1.414L12,13.414,9.707,15.707a1,1,0,0,1-1.414-1.414Z"></path></g></svg>
 
     <svg id="modify-icon" class="modify-card absolute top-14 right-2 transition-all duration-300 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.1938 2.80624C22.2687 3.88124 22.2687 5.62415 21.1938 6.69914L20.6982 7.19469C20.5539 7.16345 20.3722 7.11589 20.1651 7.04404C19.6108 6.85172 18.8823 6.48827 18.197 5.803C17.5117 5.11774 17.1483 4.38923 16.956 3.8349C16.8841 3.62781 16.8366 3.44609 16.8053 3.30179L17.3009 2.80624C18.3759 1.73125 20.1188 1.73125 21.1938 2.80624Z" fill="#00a33f"></path> <path d="M14.5801 13.3128C14.1761 13.7168 13.9741 13.9188 13.7513 14.0926C13.4886 14.2975 13.2043 14.4732 12.9035 14.6166C12.6485 14.7381 12.3775 14.8284 11.8354 15.0091L8.97709 15.9619C8.71035 16.0508 8.41626 15.9814 8.21744 15.7826C8.01862 15.5837 7.9492 15.2897 8.03811 15.0229L8.99089 12.1646C9.17157 11.6225 9.26191 11.3515 9.38344 11.0965C9.52679 10.7957 9.70249 10.5114 9.90743 10.2487C10.0812 10.0259 10.2832 9.82394 10.6872 9.41993L15.6033 4.50385C15.867 5.19804 16.3293 6.05663 17.1363 6.86366C17.9434 7.67069 18.802 8.13296 19.4962 8.39674L14.5801 13.3128Z" fill="#00a33f"></path> <path d="M20.5355 20.5355C22 19.0711 22 16.714 22 12C22 10.4517 22 9.15774 21.9481 8.0661L15.586 14.4283C15.2347 14.7797 14.9708 15.0437 14.6738 15.2753C14.3252 15.5473 13.948 15.7804 13.5488 15.9706C13.2088 16.1327 12.8546 16.2506 12.3833 16.4076L9.45143 17.3849C8.64568 17.6535 7.75734 17.4438 7.15678 16.8432C6.55621 16.2427 6.34651 15.3543 6.61509 14.5486L7.59235 11.6167C7.74936 11.1454 7.86732 10.7912 8.02935 10.4512C8.21958 10.052 8.45272 9.6748 8.72466 9.32615C8.9563 9.02918 9.22032 8.76528 9.57173 8.41404L15.9339 2.05188C14.8423 2 13.5483 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355Z" fill="#00a33f"></path> </g></svg>
@@ -90,11 +93,11 @@
     </div>
     <div class="player-card-bottom">
       <div class="player-info">
-        <!-- Player Name-->
+        
         <div class="player-name">
           <span id="player-name">LIONEL MESSI</span>
         </div>
-        <!-- Player Features-->
+        
         <div class="player-features">
           <div class="player-features-col">
             <span>
@@ -127,128 +130,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <!-- <section class="my-32 flex items-center justify-center">
-    <div
-      class="bg-[url('../assets/img/fut-card.png')] bg-cover bg-center grid grid-rows-5 h-[500px] w-[300px] px-10 py-14">
-      <div class="row-span-3 grid grid-cols-3 ">
-        <div class="flex flex-col justify-center items-center gap-5 pt-6 pr-2">
-          <div>
-            <h1 class="text-2xl font-medium text-white">99</h1>
-            <h2 class="text-2xl font-medium text-white">ST</h2>
-          </div>
-          <img src="../assets/img/arg.webp" class="">
-          <img src="../assets/img/miami.webp" class="w-1/2">
-        </div>
-        <div class="col-span-2 flex items-end w-[180px]">
-          <img src="../assets/img/messi.webp" class="w-full">
-        </div>
-        <div class="col-span-3 flex items-center justify-center">
-          <h1 class="text-white font-bold text-3xl">LIONEL MESSI</h1>
-        </div>
-      </div>
-      <div class="row-span-2 grid grid-cols-2 text-white py-10">
-        <div class="flex flex-col items center">
-          <div class="flex gap-4 items-center justify-center">
-            <h1 class="font-semibold text-xl">97</h1>
-            <h2 class="font-semibold text-xl">PAC</h2>
-          </div>
-          <div class="flex gap-4 items-center justify-center">
-            <h1 class="font-semibold text-xl">99</h1>
-            <h2 class="font-semibold text-xl">SHO</h2>
-          </div>
-          <div class="flex gap-4 items-center justify-center">
-            <h1 class="font-semibold text-xl">98</h1>
-            <h2 class="font-semibold text-xl">PAS</h2>
-          </div>
-        </div>
-
-        <div class="flex flex-col items center">
-          <div class="flex gap-4 items-center justify-center">
-            <h1 class="font-semibold text-xl">99</h1>
-            <h2 class="font-semibold text-xl">DRI</h2>
-          </div>
-          <div class="flex gap-4 items-center justify-center">
-            <h1 class="font-semibold text-xl">45</h1>
-            <h2 class="font-semibold text-xl">DEF</h2>
-          </div>
-          <div class="flex gap-4 items-center justify-center">
-            <h1 class="font-semibold text-xl">85</h1>
-            <h2 class="font-semibold text-xl">PHY</h2>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section> -->
-
-  <!-- <section class="flex justify-center py-20 ">
-    <div
-      class="relative w-[100px] h-[180px] bg-cover bg-center  bg-[url('https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png')] transition-all ease-in">
-      <div class="relative flex text-[#e9cc74] px-[0.3rem]">
-        <div class="absolute py-[0.8rem_0] text-xs uppercase font-light">
-          <div class="text-[1rem] mt-5">97</div>
-          <div>ST</div>
-          <div class="block">
-            <img src="../assets/img/arg.webp" alt="" class="w-[1rem] h-[14px] object-contain" />
-          </div>
-          <div class="block">
-            <img src="../assets/img/miami.webp" alt="" class="w-[1rem] h-[14px] object-contain" />
-          </div>
-        </div>
-        <div class="w-[70px] h-[80px] mx-auto overflow-hidden">
-          <img src="../assets/img/messi.webp" alt="" class="w-full h-full object-contain relative right-[-1rem] bottom-0" />
-
-        </div>
-      </div>
-
-      <div class=" w-full flex justify-around text-[#88e635] text-[0.7rem] font-bold uppercase">
-        <span class="ml-[0.4rem] text-shadow-lg"></span>
-        <span class="ml-[0.4rem] text-shadow-lg"></span>
-      </div>
-
-      <div class="relative">
-        <div class="text-[#e9cc74] w-[90%] mx-auto">
-          <div class="text-center  w-[100%] text-[0.6rem] uppercase border-b-2 border-[#e9cc74]/[0.1] ">
-            <span class="block text-shadow-lg"></span>
-          </div>
-          <div class="flex justify-center ">
-            <div class="pr-[1.5rem] border-r-2 border-[#e9cc74]/[0.1]">
-              <div class="flex items-center text-[0.5rem] uppercase">
-                <span class="font-bold mr-[0.3rem]">97</span>
-                <span class="font-light">PAC</span>
-              </div>
-              <div class="flex items-center text-[0.5rem] uppercase">
-                <span class="font-bold mr-[0.3rem]">95</span>
-                <span class="font-light">SHO</span>
-              </div>
-              <div class="flex items-center text-[0.5rem] uppercase">
-                <span class="font-bold mr-[0.3rem]">94</span>
-                <span class="font-light">PAS</span>
-              </div>
-            </div>
-            <div>
-              <div class="flex items-center text-[0.5rem] uppercase">
-                <span class="font-bold mr-[0.3rem]">99</span>
-                <span class="font-light">DRI</span>
-              </div>
-              <div class="flex items-center text-[0.5rem] uppercase">
-                <span class="font-bold mr-[0.3rem]">35</span>
-                <span class="font-light">DEF</span>
-              </div>
-              <div class="flex items-center text-[0.5rem] uppercase">
-                <span class="font-bold mr-[0.3rem]">68</span>
-                <span class="font-light">PHY</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section> -->
-
+  
   <footer class="xl:mt-32 mx-auto w-full relative text-center bg-[#000000] text-white">
 
     <div class="flex flex-col justify-center items-center px-6 py-8 md:py-14 xl:pt-20 xl:pb-12">
