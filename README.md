@@ -59,7 +59,7 @@ Concevoir une application web de gestion d'équipe Ultimate Team pour EA FC 25, 
 Clonez le project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/ABDELHAFIDAIT/FUT-Champions
 ```
 
 Accéder au Dossier
