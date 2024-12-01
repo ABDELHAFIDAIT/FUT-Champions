@@ -35,8 +35,8 @@
 <body>
     <header>
 
-        <nav class="flex items-center justify-between px-[5rem] py-5">
-            <div class="flex items-center gap-10">
+        <nav class="flex items-center  lg:justify-between px-[5rem] py-5 gap-10 flex-wrap justify-center">
+            <div class="flex items-center gap-10 justify-center  md:justify-between">
                 <img class="w-[4rem]" src="./assets/img/fut-logo.png" alt="Logo de FUT CHAMPIONS">
                 <form class="flex border-none gap-4 py-2 px-4 rounded-md items-center bg-gray-100 w-min">
                     <input type="text" placeholder="Search..."
@@ -54,44 +54,44 @@
                         </svg></button>
                 </form>
             </div>
-            <div class="flex items-center gap-20">
+            <div class="flex items-center gap-10">
                 <ul class="flex items-center justify-evenly text-white gap-10">
                     <a href="#">
-                        <li class="active transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Home
+                        <li class="active transition-all duration-500 hover:text-[#FFE37D] text-sm md:text-lg font-medium">Home
                         </li>
                     </a>
                     <a href="./views/players.html">
-                        <li class="transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Players</li>
+                        <li class="transition-all duration-500 hover:text-[#FFE37D] text-sm md:text-lg font-medium">Players</li>
                     </a>
                     <a href="./views/squad.html">
-                        <li class="transition-all duration-500 hover:text-[#FFE37D] text-lg font-medium">Squad
+                        <li class="transition-all duration-500 hover:text-[#FFE37D] text-sm md:text-lg font-medium">Squad
                             Builder</li>
                     </a>
                 </ul>
                 <button type="button"
-                    class="bg-transparent border border-[#FFE37D] px-5 py-2 rounded-sm font-medium text-[#FFE37D] transition-all duration-500 hover:scale-105 hover:bg-[#FFE37D] hover:text-black hover:border-none">Sign
+                    class="bg-transparent border border-[#FFE37D] text-xs lg:text-lg w-max md:w-max px-3 py-1 md:px-5 md:py-2 rounded-sm font-medium text-[#FFE37D] transition-all duration-500 hover:scale-105 hover:bg-[#FFE37D] hover:text-black hover:border-none">Sign
                     Up</button>
             </div>
         </nav>
 
-        <div class="flex items-center justify-between px-[5rem] py-20 gap-40">
+        <div class="flex flex-col md:flex-row items-center justify-around lg:justify-between px-[5rem] py-20 gap-10 lg:gap-40">
             <div class="flex flex-col gap-8">
                 <img class="w-2/3" src="./assets/img/fut-champs.png">
-                <h1 class="text-white text-xl text-justify font-light">Step
+                <h1 class="text-white text-xs md:text-lg lg:text-xl text-justify font-light">Step
                     into the world of EA FC 25 Ultimate Team! Build,
                     customize, and dominate with your dream squads using our
                     sleek, interactive platform. Unleash your tactical
                     genius and lead your team to victory!</h1>
                 <div class="flex gap-5">
                     <button
-                        class="rounded-sm bg-[#FFE37D] px-5 py-2 transition-all duration-500 font-medium hover:scale-105 hover:bg-[#FFB200]"
+                        class="rounded-sm bg-[#FFE37D] text-xs md:text-xl w-max px-3 py-2 md:px-5 transition-all duration-500 font-medium hover:scale-105 hover:bg-[#FFB200]"
                         type="button">Discover More</button>
                     <button
-                        class="rounded-sm border border-red-300 text-red-300 px-5 py-2 transition-all duration-500 font-medium hover:bg-red-300 hover:text-black hover:scale-105"
+                        class="rounded-sm border text-xs md:text-xl w-max  border-red-300 text-red-300 px-3 md:px-5 py-2 transition-all duration-500 font-medium hover:bg-red-300 hover:text-black hover:scale-105"
                         type="button">Build Team</button>
                 </div>
             </div>
-            <img class="w-5/12" src="./assets/img/player-card.png">
+            <img class="w-full md:w-5/12" src="./assets/img/player-card.png">
         </div>
 
     </header>

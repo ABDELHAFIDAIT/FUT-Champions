@@ -144,7 +144,12 @@ function filterPlayers(poste, index) {
                     stCard.className = "card-p fut-player-card cursor-pointer z-0 transition-all duration-300 hover:scale-105";
                     stCard.id = "player-rb";
 
-                    stCard.innerHTML = `<div class="player-card-top">
+                    stCard.innerHTML = `
+                    <svg id="delete-icon" class="delete-card absolute top-7 right-2 transition-all duration-300 hover:scale-125" width="20px" height="20px" fill="#ff0000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12,23A11,11,0,1,0,1,12,11.013,11.013,0,0,0,12,23ZM12,3a9,9,0,1,1-9,9A9.01,9.01,0,0,1,12,3ZM8.293,14.293,10.586,12,8.293,9.707A1,1,0,0,1,9.707,8.293L12,10.586l2.293-2.293a1,1,0,0,1,1.414,1.414L13.414,12l2.293,2.293a1,1,0,1,1-1.414,1.414L12,13.414,9.707,15.707a1,1,0,0,1-1.414-1.414Z"></path></g></svg>
+
+                    <svg id="modify-icon" class="modify-card absolute top-14 right-2 transition-all duration-300 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.1938 2.80624C22.2687 3.88124 22.2687 5.62415 21.1938 6.69914L20.6982 7.19469C20.5539 7.16345 20.3722 7.11589 20.1651 7.04404C19.6108 6.85172 18.8823 6.48827 18.197 5.803C17.5117 5.11774 17.1483 4.38923 16.956 3.8349C16.8841 3.62781 16.8366 3.44609 16.8053 3.30179L17.3009 2.80624C18.3759 1.73125 20.1188 1.73125 21.1938 2.80624Z" fill="#00a33f"></path> <path d="M14.5801 13.3128C14.1761 13.7168 13.9741 13.9188 13.7513 14.0926C13.4886 14.2975 13.2043 14.4732 12.9035 14.6166C12.6485 14.7381 12.3775 14.8284 11.8354 15.0091L8.97709 15.9619C8.71035 16.0508 8.41626 15.9814 8.21744 15.7826C8.01862 15.5837 7.9492 15.2897 8.03811 15.0229L8.99089 12.1646C9.17157 11.6225 9.26191 11.3515 9.38344 11.0965C9.52679 10.7957 9.70249 10.5114 9.90743 10.2487C10.0812 10.0259 10.2832 9.82394 10.6872 9.41993L15.6033 4.50385C15.867 5.19804 16.3293 6.05663 17.1363 6.86366C17.9434 7.67069 18.802 8.13296 19.4962 8.39674L14.5801 13.3128Z" fill="#00a33f"></path> <path d="M20.5355 20.5355C22 19.0711 22 16.714 22 12C22 10.4517 22 9.15774 21.9481 8.0661L15.586 14.4283C15.2347 14.7797 14.9708 15.0437 14.6738 15.2753C14.3252 15.5473 13.948 15.7804 13.5488 15.9706C13.2088 16.1327 12.8546 16.2506 12.3833 16.4076L9.45143 17.3849C8.64568 17.6535 7.75734 17.4438 7.15678 16.8432C6.55621 16.2427 6.34651 15.3543 6.61509 14.5486L7.59235 11.6167C7.74936 11.1454 7.86732 10.7912 8.02935 10.4512C8.21958 10.052 8.45272 9.6748 8.72466 9.32615C8.9563 9.02918 9.22032 8.76528 9.57173 8.41404L15.9339 2.05188C14.8423 2 13.5483 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355Z" fill="#00a33f"></path> </g></svg>
+                    
+                    <div class="player-card-top">
                                     <div class="player-master-info">
                                         <div class="player-rating">
                                         <span id="player-rating">${player.rating}</span>
@@ -207,7 +212,7 @@ function filterPlayers(poste, index) {
                     displayPlayers.classList.remove('hidden');
                 }
 
-                
+
             })
 
             let countCards = displayPlayers.childElementCount;
@@ -224,7 +229,6 @@ function filterPlayers(poste, index) {
 }
 
 
-
 function displayGK(index) {
     fetch('https://abdelhafidait.github.io/api-players/players.json')
         .then(response => response.json())
@@ -235,7 +239,12 @@ function displayGK(index) {
                     stCard.className = "card-p fut-player-card cursor-pointer z-0 transition-all duration-300 hover:scale-105";
                     stCard.id = "player-rb";
 
-                    stCard.innerHTML = `<div class="player-card-top">
+                    stCard.innerHTML = `
+                    <svg id="delete-icon" class="delete-card absolute top-7 right-2" width="20px" height="20px" fill="#ff0000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12,23A11,11,0,1,0,1,12,11.013,11.013,0,0,0,12,23ZM12,3a9,9,0,1,1-9,9A9.01,9.01,0,0,1,12,3ZM8.293,14.293,10.586,12,8.293,9.707A1,1,0,0,1,9.707,8.293L12,10.586l2.293-2.293a1,1,0,0,1,1.414,1.414L13.414,12l2.293,2.293a1,1,0,1,1-1.414,1.414L12,13.414,9.707,15.707a1,1,0,0,1-1.414-1.414Z"></path></g></svg>
+
+                    <svg id="modify-icon" class="modify-card absolute top-14 right-2" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.1938 2.80624C22.2687 3.88124 22.2687 5.62415 21.1938 6.69914L20.6982 7.19469C20.5539 7.16345 20.3722 7.11589 20.1651 7.04404C19.6108 6.85172 18.8823 6.48827 18.197 5.803C17.5117 5.11774 17.1483 4.38923 16.956 3.8349C16.8841 3.62781 16.8366 3.44609 16.8053 3.30179L17.3009 2.80624C18.3759 1.73125 20.1188 1.73125 21.1938 2.80624Z" fill="#00a33f"></path> <path d="M14.5801 13.3128C14.1761 13.7168 13.9741 13.9188 13.7513 14.0926C13.4886 14.2975 13.2043 14.4732 12.9035 14.6166C12.6485 14.7381 12.3775 14.8284 11.8354 15.0091L8.97709 15.9619C8.71035 16.0508 8.41626 15.9814 8.21744 15.7826C8.01862 15.5837 7.9492 15.2897 8.03811 15.0229L8.99089 12.1646C9.17157 11.6225 9.26191 11.3515 9.38344 11.0965C9.52679 10.7957 9.70249 10.5114 9.90743 10.2487C10.0812 10.0259 10.2832 9.82394 10.6872 9.41993L15.6033 4.50385C15.867 5.19804 16.3293 6.05663 17.1363 6.86366C17.9434 7.67069 18.802 8.13296 19.4962 8.39674L14.5801 13.3128Z" fill="#00a33f"></path> <path d="M20.5355 20.5355C22 19.0711 22 16.714 22 12C22 10.4517 22 9.15774 21.9481 8.0661L15.586 14.4283C15.2347 14.7797 14.9708 15.0437 14.6738 15.2753C14.3252 15.5473 13.948 15.7804 13.5488 15.9706C13.2088 16.1327 12.8546 16.2506 12.3833 16.4076L9.45143 17.3849C8.64568 17.6535 7.75734 17.4438 7.15678 16.8432C6.55621 16.2427 6.34651 15.3543 6.61509 14.5486L7.59235 11.6167C7.74936 11.1454 7.86732 10.7912 8.02935 10.4512C8.21958 10.052 8.45272 9.6748 8.72466 9.32615C8.9563 9.02918 9.22032 8.76528 9.57173 8.41404L15.9339 2.05188C14.8423 2 13.5483 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355Z" fill="#00a33f"></path> </g></svg>
+                    
+                    <div class="player-card-top">
                                     <div class="player-master-info">
                                         <div class="player-rating">
                                         <span id="player-rating">${player.rating}</span>
@@ -300,9 +309,7 @@ function displayGK(index) {
             })
             let countCards = displayPlayers.childElementCount;
             let plyCard = document.querySelectorAll('.card-p');
-            console.log(countCards, plyCard.length);
             for (let j = 0; j < countCards; j++) {
-                console.log(index,"==");
                 plyCard[j].addEventListener('click', function () {
                     this.classList.remove('card-p')
                     statiqCard[index].classList.add('hidden');
@@ -336,17 +343,17 @@ const pRAT = document.getElementById('RAT');
 function validatePlayerForm() {
     let isValid = true;
 
-    if (pName.value.length <= 2) {
+    if (pName.value.trim().length <= 2) {
         alert('Player Name is too Short !');
         isValid = false;
     }
 
-    else if (pNation.value.length <= 3) {
+    else if (pNation.value.trim().length <= 3) {
         alert('Nation Name is too Short !');
         isValid = false;
     }
 
-    else if (pClub.value.length <= 2) {
+    else if (pClub.value.trim().length <= 2) {
         alert('Club Name is too Short !');
         isValid = false;
     }
@@ -396,7 +403,7 @@ function validatePlayerForm() {
         isValid = false;
     }
 
-    else if(pRAT.value < 20 || pRAT.value > 99){
+    else if (pRAT.value < 20 || pRAT.value > 99) {
         alert('20 =< PHY =< 99');
         isValid = false;
     }
@@ -405,13 +412,19 @@ function validatePlayerForm() {
 }
 
 
-function createCardPlayer(name, photo, flag, logo, pace, shot, pass, dri, def, phy, rat, pos, target){
-    
-        const cCard = document.createElement('div');
-        cCard.className = "card-p fut-player-card cursor-pointer z-0 transition-all duration-300 hover:scale-105";
-        cCard.id = "player-rb";
+function createCardPlayer(name, photo, flag, logo, pace, shot, pass, dri, def, phy, rat, pos, target) {
 
-        cCard.innerHTML = `<div class="player-card-top">
+    const cCard = document.createElement('div');
+    cCard.className = "card-p fut-player-card cursor-pointer z-0 transition-all duration-300 hover:scale-105";
+    cCard.id = "player-rb";
+
+    cCard.innerHTML = `
+                    <svg id="delete-icon" class="delete-card absolute top-7 right-2 transition-all duration-300 hover:scale-125" width="20px" height="20px" fill="#ff0000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ff0000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12,23A11,11,0,1,0,1,12,11.013,11.013,0,0,0,12,23ZM12,3a9,9,0,1,1-9,9A9.01,9.01,0,0,1,12,3ZM8.293,14.293,10.586,12,8.293,9.707A1,1,0,0,1,9.707,8.293L12,10.586l2.293-2.293a1,1,0,0,1,1.414,1.414L13.414,12l2.293,2.293a1,1,0,1,1-1.414,1.414L12,13.414,9.707,15.707a1,1,0,0,1-1.414-1.414Z"></path></g></svg>
+
+                    <svg id="modify-icon" class="modify-card absolute top-14 right-2 transition-all duration-300 hover:scale-125" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.1938 2.80624C22.2687 3.88124 22.2687 5.62415 21.1938 6.69914L20.6982 7.19469C20.5539 7.16345 20.3722 7.11589 20.1651 7.04404C19.6108 6.85172 18.8823 6.48827 18.197 5.803C17.5117 5.11774 17.1483 4.38923 16.956 3.8349C16.8841 3.62781 16.8366 3.44609 16.8053 3.30179L17.3009 2.80624C18.3759 1.73125 20.1188 1.73125 21.1938 2.80624Z" fill="#00a33f"></path> <path d="M14.5801 13.3128C14.1761 13.7168 13.9741 13.9188 13.7513 14.0926C13.4886 14.2975 13.2043 14.4732 12.9035 14.6166C12.6485 14.7381 12.3775 14.8284 11.8354 15.0091L8.97709 15.9619C8.71035 16.0508 8.41626 15.9814 8.21744 15.7826C8.01862 15.5837 7.9492 15.2897 8.03811 15.0229L8.99089 12.1646C9.17157 11.6225 9.26191 11.3515 9.38344 11.0965C9.52679 10.7957 9.70249 10.5114 9.90743 10.2487C10.0812 10.0259 10.2832 9.82394 10.6872 9.41993L15.6033 4.50385C15.867 5.19804 16.3293 6.05663 17.1363 6.86366C17.9434 7.67069 18.802 8.13296 19.4962 8.39674L14.5801 13.3128Z" fill="#00a33f"></path> <path d="M20.5355 20.5355C22 19.0711 22 16.714 22 12C22 10.4517 22 9.15774 21.9481 8.0661L15.586 14.4283C15.2347 14.7797 14.9708 15.0437 14.6738 15.2753C14.3252 15.5473 13.948 15.7804 13.5488 15.9706C13.2088 16.1327 12.8546 16.2506 12.3833 16.4076L9.45143 17.3849C8.64568 17.6535 7.75734 17.4438 7.15678 16.8432C6.55621 16.2427 6.34651 15.3543 6.61509 14.5486L7.59235 11.6167C7.74936 11.1454 7.86732 10.7912 8.02935 10.4512C8.21958 10.052 8.45272 9.6748 8.72466 9.32615C8.9563 9.02918 9.22032 8.76528 9.57173 8.41404L15.9339 2.05188C14.8423 2 13.5483 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355Z" fill="#00a33f"></path> </g></svg>
+                    
+                    
+                    <div class="player-card-top">
                         <div class="player-master-info">
                             <div class="player-rating">
                             <span id="player-rating">${rat}</span>
@@ -470,24 +483,26 @@ function createCardPlayer(name, photo, flag, logo, pace, shot, pass, dri, def, p
                         </div>
                         </div>`
 
-        target.parentElement.appendChild(cCard);
-        target.classList.add('hidden');
-        cCard.classList.remove('card-p');
+    target.parentElement.appendChild(cCard);
+    target.classList.add('hidden');
+    cCard.classList.remove('card-p');
 }
 
 
-for (let t = 0; t < 10; t++) {
+for (let t = 0; t < 18; t++) {
     statiqCard[t].addEventListener('click', function () {
         popup.classList.remove('hidden');
 
         let position;
-        if (t === 0 || t === 1) position = 'ST';
+        if (t === 0 || t === 1 || t === 11 || t === 12) position = 'ST';
         else if (t === 2) position = 'LM';
-        else if (t === 3 || t === 4) position = 'CM';
+        else if (t === 3 || t === 4 || t === 13 || t === 14) position = 'CM';
         else if (t === 5) position = 'RM';
         else if (t === 6) position = 'LB';
         else if (t === 7 || t === 8) position = 'CB';
         else if (t === 9) position = 'RB';
+        else if (t === 10 || t === 17) position = 'RB';
+
 
         const confirmHandler = function () {
             const valid = validatePlayerForm();
@@ -495,7 +510,7 @@ for (let t = 0; t < 10; t++) {
                 createCardPlayer(
                     pName.value,
                     pPhoto.value,
-                    pNation.value,
+                    pNationFlag.value,
                     pClubLogo.value,
                     pPAC.value,
                     pSHO.value,
@@ -521,142 +536,15 @@ for (let t = 0; t < 10; t++) {
 
 
 
+// const suppr = document.querySelectorAll('.delete-card');
+// const modify = document.querySelectorAll('.modify-card');
 
-// btnConfirmCustom.onclick = function(){
-//     const valid = validatePlayerForm();
-//     if(valid){
-//         for (let i = 0; i < 18; i++) {
-//             statiqCard[i].addEventListener('click', function () {
-//                 popup.classList.remove('hidden');
-        
-//                 if (i == 0 || i == 1) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'ST', statiqCard[i]);
-//                 }
-//                 if (i == 2) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'LM', statiqCard[i]);
-//                 }
-//                 if (i == 3 || i == 4) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'CM', statiqCard[i]);
-//                 }
-//                 if (i == 5) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'RM', statiqCard[i]);
-//                 }
-//                 if (i == 6) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'LB', statiqCard[i]);
-//                 }
-//                 if (i == 7 || i == 8) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'CB', statiqCard[i]);
-//                 }
-//                 if (i == 9) {
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.vlaue, pClubLogo, pPAC.vlaue, pSHO.vlaue, pPAS.vlaue, pDRI.vlaue, pDEF.vlaue, pPHY.vlaue, pRAT.vlaue, 'RB', statiqCard[i]);
-//                 }
-//             })
-//         }
-//     }
-
-//     popup.classList.add('hidden');
-// }
-
-
-
-// for(let t=0 ; t<10 ; t++){
-//     statiqCard[t].addEventListener('click', function(){
-//         popup.classList.remove('hidden');
-        
-//         if (t == 0 || t == 1) {
-//             btnConfirmCustom.addEventListener('click' , function(){
-//                 const valid = validatePlayerForm();
-//                 if(valid){
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'ST', statiqCard[t]);
-//                     popup.classList.add('hidden');
-//                 }
-//                 formCustom.reset();
-//             })
-//         }
-//         else if (t == 2) {
-//             btnConfirmCustom.addEventListener('click' , function(){
-//                 const valid = validatePlayerForm();
-//                 if(valid){
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'LM', statiqCard[t]);
-//                     popup.classList.add('hidden');
-//                 }
-//                 formCustom.reset();
-//             })
-//         }
-//         else if (t == 3 || t == 4) {
-//             btnConfirmCustom.addEventListener('click' , function(){
-//                 const valid = validatePlayerForm();
-//                 if(valid){
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'CM', statiqCard[t]);
-//                     popup.classList.add('hidden');
-//                 }
-//                 formCustom.reset();
-//             })
-//         }
-//         else if (t == 5) {
-//             btnConfirmCustom.addEventListener('click' , function(){
-//                 const valid = validatePlayerForm();
-//                 if(valid){
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'RM', statiqCard[t]);
-//                     popup.classList.add('hidden');
-//                 }
-//                 formCustom.reset();
-//             })
-//         }
-//         else if (t == 6) {
-//             btnConfirmCustom.addEventListener('click' , function(){
-//                 const valid = validatePlayerForm();
-//                 if(valid){
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'LB', statiqCard[t]);
-//                     popup.classList.add('hidden');
-//                 }
-//                 formCustom.reset();
-//             })
-//         }
-//         else if (t == 7 || t == 8) {
-//             btnConfirmCustom.addEventListener('click' , function(){
-//                 const valid = validatePlayerForm();
-//                 if(valid){
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'CB', statiqCard[t]);
-//                     popup.classList.add('hidden');
-//                 }
-//                 formCustom.reset();
-//             })
-//         }
-//         else if (t == 9) {
-//             btnConfirmCustom.addEventListener('click' , function(){
-//                 const valid = validatePlayerForm();
-//                 if(valid){
-//                     createCardPlayer(pName.value, pPhoto.value, pNation.value, pClubLogo.value, pPAC.value, pSHO.value, pPAS.value, pDRI.value, pDEF.value, pPHY.value, pRAT.value, 'RB', statiqCard[t]);
-//                     popup.classList.add('hidden');
-//                 }
-//                 formCustom.reset();
-//             })
+// for (let x = 0; x < 18; x++) {
+//     suppr[x].addEventListener('click', function () {
+//         const confirmation = confirm('Remove This Player ?');
+//         if (confirmation) {
+//             suppr[x].parentElement.classList.add('hidden');
+//             statiqCard[x].classList.remove('hidden');
 //         }
 //     });
-// }
-
-
-
-// if (i == 10) {
-//     displayGK(i);
-// }
-
-
-
-// if (i == 11 || i == 12) {
-    
-// }
-// if (i == 13 || i == 14) {
-    
-    
-    
-// }
-// if (i == 15 || i == 16) {
-    
-    
-    
-// }
-// if (i == 17) {
-//     displayGK(i);
 // }
